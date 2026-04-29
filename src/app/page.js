@@ -282,29 +282,23 @@ export default function HomePage() {
             {features.showMap && restaurantInfo.mapEmbedUrl && (
               <div className="flex flex-col gap-6 items-center w-full">
                 <div className="h-[400px] w-full rounded-3xl overflow-hidden border border-border shadow-inner">
-                  <iframe 
-                    src={restaurantInfo.mapEmbedUrl}
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen="" 
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Google Maps Location"
-                  />
+                  <div className="relative w-full h-full">
+                    <iframe
+                      src={restaurantInfo.mapEmbedUrl}
+                      className="w-full h-full border-0 rounded-2xl"
+                      loading="lazy"
+                      title="Google Maps Location"
+                    />
+                    <a
+                      href={restaurantInfo.mapEmbedUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold shadow-[0_10px_30px_rgba(249,115,22,0.45)] hover:scale-105 transition-all"
+                    >
+                      Open in Maps
+                    </a>
+                  </div>
                 </div>
-                
-                {restaurantInfo.mapUrl && (
-                  <a 
-                    href={restaurantInfo.mapUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-center gap-2 bg-muted hover:bg-border transition-colors font-bold px-8 py-4 rounded-2xl shadow-sm active:scale-95 text-base text-foreground w-full sm:w-auto mt-2"
-                  >
-                    Open in Google Maps
-                    <ExternalLink size={18} className="text-muted-foreground" />
-                  </a>
-                )}
               </div>
             )}
           </div>
