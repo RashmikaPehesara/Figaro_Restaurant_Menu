@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🍽️ Figaro Restaurant Menu (QR Menu System)
 
-## Getting Started
+## 🚀 Live Demo
 
-First, run the development server:
+👉 https://figaro-restaurant-menu.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 About This Project
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This is a **modern digital restaurant menu system** built using Next.js.
+It is designed for restaurants to replace traditional printed menus with a **fast, mobile-friendly QR menu experience**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Customers can easily browse food items, view categories, and check prices — while restaurant owners can later extend it with an **admin panel for managing menu content**.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* 🍽️ Beautiful and modern restaurant UI
+* 📱 Fully responsive (mobile-first design)
+* ⚡ Fast performance with Next.js
+* 🧾 Category-based menu (Rice, Drinks, Desserts, etc.)
+* 🛒 Add-to-cart UI with floating cart button
+* 🖼️ Image gallery with fullscreen preview
+* 🔗 Social media integration (Facebook, Instagram, TikTok)
+* 📍 Google Maps location support
+* 📞 WhatsApp order integration (optional)
+* 🎯 Optimized for QR code usage in restaurants
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Frontend:** Next.js, React, Tailwind CSS
+* **Animations:** Framer Motion
+* **Icons:** React Icons
+* **State Management:** React Context API
+* **Deployment:** Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📲 How It Works
+
+1. Customer scans QR code
+2. Menu opens instantly in browser
+3. User browses categories and items
+4. Views prices, images, and details
+5. Can place order via WhatsApp (optional)
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **Vercel**.
+Every push to GitHub automatically triggers a new deployment.
+
+---
+
+## 🔮 Future Improvements
+
+* 🔐 Admin panel for restaurant owners
+* 🗄️ Database integration (MongoDB / Supabase)
+* ✏️ Edit menu items (price, images, availability)
+* 📊 Order management system
+* 💳 Online payment integration
+
+---
+
+## 👨‍💻 Author
+
+**Rashmika Pehesara**
+
+---
+
+⭐ If you like this project, feel free to star the repository!
