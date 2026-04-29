@@ -30,14 +30,19 @@ function CategoryItemsView({ category, items }) {
   const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.1 } } };
 
   return (
-    <main className="container mx-auto px-4 py-8">
-      <div className="flex items-center mb-8">
-        <Link href="/menu" className="mr-5 p-3 bg-muted hover:bg-border rounded-full transition-all hover:scale-105 active:scale-95 shadow-sm">
-          <ArrowLeft size={24} />
-        </Link>
-        <h1 className="text-3xl md:text-5xl font-black tracking-tight capitalize bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500">
-          {category.name}
-        </h1>
+    <main className="container mx-auto px-4 py-8 pb-24">
+      <div className="sticky top-0 z-40 bg-background/80 backdrop-blur-md py-4 mb-4">
+        <div className="flex items-center gap-3">
+          <Link
+            href="/menu"
+            className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md shadow-md transition-transform hover:scale-105 active:scale-95"
+          >
+            <ArrowLeft size={20} strokeWidth={2.5} />
+          </Link>
+          <h1 className="text-3xl md:text-5xl font-black tracking-tight capitalize bg-clip-text text-transparent bg-gradient-to-r from-primary to-yellow-500">
+            {category.name}
+          </h1>
+        </div>
       </div>
 
       {items.length === 0 ? (
@@ -66,17 +71,27 @@ function CategoryItemsView({ category, items }) {
         src={selectedImage?.src} 
         alt={selectedImage?.alt} 
       />
+
+
+      <div className="text-center text-[13px] text-white/40 mt-6 mb-0">
+
+
+      
+        <strong>© 2026 FIGARO. All rights reserved.</strong>
+        <br />
+        Developed by <a href="https://wa.me/94768638725" target="_blank" rel="noopener noreferrer" className="hover:text-white">Pixora Studio</a>
+      </div>
     </main>
   );
 }
 
 function ItemCard({ item, onImageClick, addToCart }) {
-  const [selectedSize, setSelectedSize] = useState(item.pricing.type === "sizes" ? item.pricing.sizes[0] : null);
+  const [selectedSize, setSelectedSize] = useState(item.pricing.type === "multi" ? item.pricing.options[0] : null);
   const [isAdding, setIsAdding] = useState(false);
   
   const handleAdd = () => {
     setIsAdding(true);
-    addToCart(item, selectedSize, 1);
+    addToCart(item, selectedSize ? { name: selectedSize.label, price: selectedSize.price } : null, 1);
     setTimeout(() => setIsAdding(false), 300);
   };
 
@@ -96,23 +111,29 @@ function ItemCard({ item, onImageClick, addToCart }) {
             src={item.image} 
             alt={item.name} 
             fill
+            loading="lazy"
             sizes="(max-width: 768px) 50vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105" 
           />
         </div>
       )}
       <div className="p-4 md:p-5 flex flex-col flex-1 justify-between">
-        <h3 className="font-extrabold text-sm md:text-lg leading-tight mb-3 group-hover:text-primary transition-colors">{item.name}</h3>
+        <h3 className="font-extrabold text-sm md:text-lg leading-tight mb-2 group-hover:text-primary transition-colors">{item.name}</h3>
+        {clientData.features.showDescription && item.description && (
+          <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+            {item.description}
+          </p>
+        )}
         
-        {item.pricing.type === "sizes" && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {item.pricing.sizes.map((s) => (
+        {item.pricing.type === "multi" && (
+          <div className="flex flex-wrap gap-2 mt-2 mb-4">
+            {item.pricing.options.map((opt) => (
               <button
-                key={s.name}
-                onClick={() => setSelectedSize(s)}
-                className={`text-[10px] md:text-xs px-2.5 py-1.5 rounded-lg font-bold transition-all active:scale-95 ${selectedSize.name === s.name ? "bg-primary text-primary-foreground shadow-sm shadow-primary/30" : "bg-muted text-muted-foreground hover:bg-border"}`}
+                key={opt.label}
+                onClick={() => setSelectedSize(opt)}
+                className={`px-3 py-1 text-[10px] md:text-xs rounded-full transition-all active:scale-95 ${selectedSize?.label === opt.label ? "bg-primary text-primary-foreground shadow-sm shadow-primary/30" : "bg-white/10 text-muted-foreground hover:bg-border"}`}
               >
-                {s.name}
+                {opt.label}
               </button>
             ))}
           </div>
