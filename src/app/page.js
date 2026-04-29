@@ -1,65 +1,339 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { clientData } from "@/data/clientData";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { PhoneCall, MessageCircle, MapPin, Clock, ExternalLink } from "lucide-react";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { useState } from "react";
+import { GalleryModal } from "@/components/GalleryModal";
+
+export default function HomePage() {
+  const { restaurantInfo, features, offers, gallery, social = clientData.socialMedia, items } = clientData;
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [initialGalleryIndex, setInitialGalleryIndex] = useState(0);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100 } }
+  };
+
+  const nameContainerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.08 } }
+  };
+
+  const nameLetterVariants = {
+    hidden: { opacity: 0, y: 20, filter: "blur(8px)" },
+    visible: { opacity: 1, y: 0, filter: "blur(0px)" }
+  };
+
+  const openGallery = (index) => {
+    setInitialGalleryIndex(index);
+    setGalleryOpen(true);
+  };
+
+  const chefRecommendations = items?.filter(item => item.featured) || [];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src={gallery[0] || "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80"}
+            alt="Hero Background"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-40 mix-blend-overlay"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        <motion.div 
+          className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 overflow-hidden"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div variants={itemVariants} className="mb-6 flex justify-center items-center w-full">
+            {restaurantInfo.logo ? (
+              <Image
+                src={restaurantInfo.logo}
+                alt="Logo"
+                width={190}
+                height={190}
+                className="object-contain"
+              />
+            ) : (
+              <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-primary to-yellow-500 shadow-[0_0_40px_rgba(249,115,22,0.4)] flex items-center justify-center border-2 border-primary/50 text-white font-black text-5xl">
+                {restaurantInfo.name.charAt(0)}
+              </div>
+            )}
+          </motion.div>
+
+          <motion.h1 
+            variants={itemVariants}
+            className="w-full text-center text-6xl md:text-8xl font-black tracking-tighter mb-4 text-white leading-tight break-words"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            {restaurantInfo.name.split("").map((char, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.15 }}  // Name letters transition speed (increase number for more slow)
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.h1>
+          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto mb-10 font-medium">
+            {restaurantInfo.tagline}
+          </motion.p>
+          
+          <motion.div variants={itemVariants} className="flex flex-col items-center">
+            <Link 
+              href="/menu" 
+              style={{ fontFamily: "var(--font-outfit)" }}
+              className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground font-extrabold px-10 py-5 rounded-full text-xl shadow-lg"
+            >
+              View Menu
+            </Link>
+
+            {/* Social Media Links */}
+
+            {(features.showSocialMedia && social) && (
+  <div className="mt-8 flex gap-4">
+
+    {social.facebook?.enabled && social.facebook.url && (
+      <a href={social.facebook.url} target="_blank" rel="noreferrer"
+        className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#1877F2] hover:text-white transition-colors border border-white/5">
+        <FaFacebook size={18} />
+      </a>
+    )}
+
+    {social.instagram?.enabled && social.instagram.url && (
+      <a href={social.instagram.url} target="_blank" rel="noreferrer"
+        className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#E4405F] hover:text-white transition-colors border border-white/5">
+        <FaInstagram size={18} />
+      </a>
+    )}
+
+    {social.tiktok?.enabled && social.tiktok.url && (
+      <a href={social.tiktok.url} target="_blank" rel="noreferrer"
+        className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-black hover:text-white transition-colors border border-white/5">
+        <FaTiktok size={18} />
+      </a>
+    )}
+              </div>
+            )}
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Offers OR Chef Recommendations */}
+      {(features.showOffers && offers.length > 0) ? (
+        <section className="py-16 container px-4 flex-none">
+          <div className="flex flex-col items-center mb-10 text-center">
+            <h2 className="text-4xl font-extrabold pb-2 tracking-tight">Popular Picks</h2>
+            <div className="w-16 h-1 bg-white/20 rounded-full" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {offers.map(offer => (
+              <motion.div 
+                key={offer.id}
+                whileHover={{ y: -5 }}
+                className="relative h-48 rounded-3xl overflow-hidden border border-border group"
+              >
+                <Image src={offer.image} alt={offer.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent p-6 flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold text-primary mb-2 shadow-sm drop-shadow-md">{offer.title}</h3>
+                  <p className="text-muted-foreground font-medium drop-shadow-md max-w-[70%]">{offer.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      ) : (
+        chefRecommendations.length > 0 && (
+          <section className="py-16 container px-4 overflow-hidden flex-none">
+            <div className="flex flex-col items-center mb-10 text-center">
+              <h2 className="text-4xl font-extrabold pb-2 tracking-tight">Popular Picks</h2>
+              <div className="w-16 h-1 bg-white/20 rounded-full" />
+            </div>
+            
+            <div className="flex flex-wrap gap-6 justify-center">
+              {chefRecommendations.map((item) => (
+                <Link href={`/menu/${item.categoryId}`} key={item.id} className="block shrink-0 w-[280px]">
+                  <div className="bg-card border border-border rounded-3xl overflow-hidden shadow-lg group hover:border-primary/50 transition-colors">
+                    <div className="relative h-48 bg-muted">
+                      <Image src={item.image} alt={item.name} fill sizes="280px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-bold text-xl mb-1">{item.name}</h3>
+                      <p className="text-primary font-semibold text-lg tracking-wide font-sans tabular-nums">{clientData.currency} {Number(item.pricing.type === "single" ? item.pricing.price : item.pricing.sizes[0].price).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )
+      )}
+
+      {/* Auto-scrolling Gallery */}
+      {features.showGallery && gallery.length > 0 && (
+        <section className="py-16 bg-card/30 border-y border-border/50 flex-none overflow-hidden">
+          <div className="container px-4">
+             <div className="flex flex-col items-center mb-10 text-center">
+              <h2 className="text-3xl font-extrabold pb-2 tracking-tight">Moments at Our Place</h2>
+              <div className="w-12 h-1 bg-white/20 rounded-full" />
+            </div>
+            
+            <div className="flex w-[200%] md:w-[150%] animate-marquee">
+              <motion.div 
+                className="flex gap-4 px-4 w-full justify-around"
+                animate={{ x: [0, -1000] }}
+                transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+              >
+                {[...gallery, ...gallery].map((src, idx) => (
+                  <div 
+                    key={idx} 
+                    onClick={() => openGallery(idx % gallery.length)}
+                    className="relative w-64 h-40 md:w-72 md:h-44 rounded-2xl overflow-hidden shrink-0 shadow-lg cursor-pointer group"
+                  >
+                    <Image src={src} alt="Ambience" fill sizes="288px" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <span className="opacity-0 group-hover:opacity-100 text-white font-semibold transition-opacity bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm">View Full</span>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Contact & Map Section */}
+      <section className="py-20 container px-4 flex-none">
+        <div className="flex flex-col items-center mb-12 text-center">
+          <h2 className="text-4xl font-extrabold pb-2 tracking-tight">Find Us Here</h2>
+          <div className="w-20 h-1 bg-white/20 rounded-full" />
+        </div>
+
+        <div className="bg-card rounded-[2rem] p-6 lg:p-10 border border-border shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <div className="flex flex-col justify-center">
+              <ul className="space-y-8">
+                <li className="flex items-start gap-5">
+                  <div className="p-4 rounded-full bg-primary/10 text-primary shrink-0 box-content">
+                    <MapPin size={28} />
+                  </div>
+                  <div>
+                    <p className="font-bold text-xl mb-1">Our Location</p>
+                    <p className="text-muted-foreground text-lg leading-relaxed">{restaurantInfo.address}</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-5">
+                  <div className="p-4 rounded-full bg-primary/10 text-primary shrink-0 box-content">
+                    <Clock size={28} />
+                  </div>
+                  <div>
+                    <p className="font-bold text-xl mb-1">Opening Hours</p>
+                    <p className="text-muted-foreground text-lg leading-relaxed">{restaurantInfo.openingHours}</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <a 
+                  href={`tel:${restaurantInfo.phone}`}
+                  className="flex-1 flex items-center justify-center gap-3 bg-muted hover:bg-border transition-colors font-bold py-5 rounded-2xl active:scale-95 text-lg"
+                >
+                  <PhoneCall size={22} className="text-primary" />
+                  Call Us
+                </a>
+                {restaurantInfo.whatsapp && (
+                  <a 
+                    href={`https://wa.me/${restaurantInfo.whatsapp.replace(/\+/g, "")}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 flex items-center justify-center gap-3 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-bold py-5 rounded-2xl active:scale-95 text-lg"
+                  >
+                    <MessageCircle size={22} />
+                    WhatsApp
+                  </a>
+                )}
+              </div>
+            </div>
+
+            {features.showMap && restaurantInfo.mapEmbedUrl && (
+              <div className="flex flex-col gap-6 items-center w-full">
+                <div className="h-[400px] w-full rounded-3xl overflow-hidden border border-border shadow-inner">
+                  <iframe 
+                    src={restaurantInfo.mapEmbedUrl}
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Google Maps Location"
+                  />
+                </div>
+                
+                {restaurantInfo.mapUrl && (
+                  <a 
+                    href={restaurantInfo.mapUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-center gap-2 bg-muted hover:bg-border transition-colors font-bold px-8 py-4 rounded-2xl shadow-sm active:scale-95 text-base text-foreground w-full sm:w-auto mt-2"
+                  >
+                    Open in Google Maps
+                    <ExternalLink size={18} className="text-muted-foreground" />
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Branding */}
+      <footer className="py-8 text-center mt-auto flex flex-col items-center gap-2 mb-12">
+        <p className="font-medium text-sm text-muted-foreground/80">© {new Date().getFullYear()} {restaurantInfo.name}. All rights reserved.</p>
+        <div className="text-xs text-muted-foreground/50">
+          Developed by{" "}
+          <a 
+            href="https://wa.me/94768638725" 
+            target="_blank" 
+            rel="noreferrer"
+            className="text-white/60 hover:text-white transition-colors hover:underline"
           >
-            Documentation
+            Pixora Studio
           </a>
         </div>
-      </main>
-    </div>
+      </footer>
+
+      {/* Fullscreen Gallery Modal */}
+      <GalleryModal 
+        images={gallery} 
+        isOpen={galleryOpen} 
+        initialIndex={initialGalleryIndex} 
+        onClose={() => setGalleryOpen(false)} 
+      />
+    </main>
   );
 }
