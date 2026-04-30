@@ -143,11 +143,11 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Offers OR Chef Recommendations */}
-      {(features.showOffers && offers.length > 0) ? (
+      {/* Offers Section */}
+      {features.showOffers && offers.length > 0 && (
         <section className="py-16 container px-4 flex-none">
           <div className="flex flex-col items-center mb-10 text-center">
-            <h2 className="text-4xl font-extrabold pb-2 tracking-tight">Popular Picks</h2>
+            <h2 className="text-4xl font-extrabold pb-2 tracking-tight">Special Offers</h2>
             <div className="w-16 h-1 bg-white/20 rounded-full" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -166,17 +166,20 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-      ) : (
-        features.showPopularPicks && chefRecommendations.length > 0 && (
+      )}
+
+      {/* Popular Picks Section */}
+      {features.showPopularPicks && chefRecommendations.length > 0 && (
           <section className="py-16 container px-4 overflow-hidden flex-none">
             <div className="flex flex-col items-center mb-10 text-center">
               <h2 className="text-4xl font-extrabold pb-2 tracking-tight">Popular Picks</h2>
               <div className="w-16 h-1 bg-white/20 rounded-full" />
             </div>
             
-            <div className="flex flex-wrap gap-6 justify-center">
+            <div className="flex gap-4 overflow-x-auto scrollbar-hide px-2 scroll-smooth">
               {chefRecommendations.map((item) => (
-                <Link href={`/menu/${item.categoryId}`} key={item.id} className="block shrink-0 w-[280px]">
+                <div key={item.id} className="min-w-[260px] max-w-[260px] flex-shrink-0">
+                  <Link href={`/menu/${item.categoryId}`} className="block w-full">
                   <div className="bg-card border border-border rounded-3xl overflow-hidden shadow-lg group hover:border-primary/50 transition-colors">
                     <div className="relative h-48 bg-muted">
                       <Image src={item.image} alt={item.name} fill sizes="280px" loading="lazy" className="object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -189,11 +192,11 @@ export default function HomePage() {
                       <p className="text-primary font-semibold text-lg tracking-wide font-sans tabular-nums">{clientData.currency} {Number(item.pricing.type === "single" ? item.pricing.price : item.pricing.options[0].price).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
                     </div>
                   </div>
-                </Link>
+                  </Link>
+                </div>
               ))}
             </div>
           </section>
-        )
       )}
 
       {/* Auto-scrolling Gallery */}

@@ -14,7 +14,7 @@ export const clientData = {
   
   features: {
     showGallery: true,
-    showOffers: false,
+    showOffers: true,
     enableWhatsappOrder: true,
     showItemImages: true,
     showSocialMedia: true,
@@ -34,7 +34,7 @@ export const clientData = {
       id: "o1",
       title: "Weekend Special",
       description: "2 Burgers + 2 Drinks for $25",
-      image: "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+      image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&q=60",
     },
     {
       id: "o2",

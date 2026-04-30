@@ -55,7 +55,7 @@ function CategoryItemsView({ category, items }) {
           animate="show"
         >
           {items.map((item) => (
-            <ItemCard 
+            <ItemCard  
               key={item.id} 
               item={item} 
               onImageClick={() => setSelectedImage({ src: item.image, alt: item.name })}
