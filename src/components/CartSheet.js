@@ -19,6 +19,7 @@ export function CartSheet() {
 
   const [tableNumber, setTableNumber] = useState("");
   const [showTablePrompt, setShowTablePrompt] = useState(false);
+  const [showOrderSummary, setShowOrderSummary] = useState(false);
 
   const serviceChargeAmount = (subtotal * clientData.restaurantInfo.serviceCharge) / 100;
   const total = subtotal + serviceChargeAmount;
@@ -26,9 +27,9 @@ export function CartSheet() {
   const handleCheckout = () => {
     if (clientData.features.enableWhatsappOrder) {
       setShowTablePrompt(true);
+    } else {
+      setShowOrderSummary(true);
     }
-    // If WhatsApp is disabled, user is instructed to call waiter.
-    // Cart remains open as a visual reference, no popup.
   };
 
   const submitWhatsappOrder = () => {
@@ -111,7 +112,7 @@ export function CartSheet() {
                       {item.size && (
                         <p className="text-xs text-muted-foreground">{item.size.name}</p>
                       )}
-                      <div className="text-primary font-semibold text-lg tracking-wide font-sans tabular-nums mt-1">
+                      <div className="text-primary font-semibold text-lg tracking-wide font-[Rubik] tabular-nums mt-1">
                         {clientData.currency} {Number(item.size?.price || item.pricing.price).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                       </div>
                     </div>
@@ -149,17 +150,17 @@ export function CartSheet() {
                 <div className="space-y-2 mb-4 text-sm">
                   <div className="flex justify-between text-muted-foreground mb-4 text-sm">
                     <span>Subtotal</span>
-                    <span className="font-semibold tracking-wide font-sans tabular-nums">{clientData.currency} {Number(subtotal).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
+                    <span className="font-semibold tracking-wide font-[Rubik] tabular-nums">{clientData.currency} {Number(subtotal).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
                   </div>
                   {serviceChargeAmount > 0 && (
                     <div className="flex justify-between text-sm text-muted-foreground/80 my-2">
                       <span>Service Charge ({clientData.restaurantInfo.serviceCharge}%)</span>
-                      <span className="font-semibold tracking-wide font-sans tabular-nums">{clientData.currency} {Number(serviceChargeAmount).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
+                      <span className="font-semibold tracking-wide font-[Rubik] tabular-nums">{clientData.currency} {Number(serviceChargeAmount).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
                     </div>
                   )}
                   <div className="flex justify-between font-black text-xl md:text-2xl mt-4 pt-4 border-t border-border/50">
                     <span>Total</span>
-                    <span className="text-primary font-semibold text-lg md:text-xl tracking-wide font-sans tabular-nums">{clientData.currency} {Number(total).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
+                    <span className="text-primary font-semibold text-lg md:text-xl tracking-wide font-[Rubik] tabular-nums">{clientData.currency} {Number(total).toLocaleString("en-LK", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
                   </div>
                 </div>
 
@@ -223,6 +224,82 @@ export function CartSheet() {
             )}
           </motion.div>
         </>
+      )}
+
+      {showOrderSummary && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <div className="w-full max-w-sm bg-[#111] rounded-2xl shadow-2xl border border-white/10 p-5 text-white">
+            
+            {/* Header */}
+            <div className="text-center mb-4">
+              <h2 className="text-lg font-bold tracking-wide text-orange-500">
+                {clientData.restaurantInfo.name}
+              </h2>
+              <div className="text-xs text-white/50">Order Summary</div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-dashed border-white/10 mb-4"></div>
+
+            {/* Items */}
+            <div className="space-y-3 text-sm max-h-[40vh] overflow-y-auto pr-2 font-[Rubik] tabular-nums tracking-wide">
+              {cartItems.map((item, index) => (
+                <div key={`${item.id}-${item.size?.name || "single"}`}>
+                  <div className="flex items-start gap-3">
+                    
+                    {/* Bullet */}
+                    <div className="w-2 h-2 mt-1.5 rounded-full bg-orange-500 flex-shrink-0"></div>
+
+                    {/* Item Info */}
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start">
+                        
+                        {/* Name */}
+                        <span className="font-medium text-white leading-tight">
+                          {item.name}
+                          {item.size?.name && (
+                            <span className="text-white/50 text-xs ml-1">
+                              ({item.size.name})
+                            </span>
+                          )}
+                        </span>
+
+                        {/* Quantity */}
+                        <span className="text-white/70 text-xs ml-3 whitespace-nowrap mt-0.5">
+                          {item.quantity} pcs
+                        </span>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  
+                  {/* Subtle divider */}
+                  {index < cartItems.length - 1 && (
+                    <div className="border-b border-white/5 my-3 ml-5"></div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-dashed border-white/10 my-4"></div>
+
+            {/* Total */}
+            <div className="flex justify-between text-base font-bold text-orange-500">
+              <span>Total</span>
+              <span className="font-[Rubik] tabular-nums">Rs. {total.toFixed(2)}</span>
+            </div>
+
+            {/* Close */}
+            <button
+              onClick={() => setShowOrderSummary(false)}
+              className="mt-6 w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-full text-sm font-semibold transition-all active:scale-95"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       )}
     </AnimatePresence>
   );

@@ -1,5 +1,11 @@
-import { Outfit } from "next/font/google";
+import { Outfit, Rubik } from "next/font/google";
 import "./globals.css";
+
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-rubik'
+});
 import { CartProvider } from "@/context/CartContext";
 import { FloatingCartButton } from "@/components/FloatingCartButton";
 import { CartSheet } from "@/components/CartSheet";
@@ -21,7 +27,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${outfit.variable} h-full antialiased selection:bg-primary/30`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground pb-0 font-sans">
+      <body className={`${rubik.variable} min-h-full flex flex-col bg-background text-foreground pb-0 font-sans`}>
         <CartProvider>
           {children}
           <FloatingCartButton />

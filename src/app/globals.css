@@ -25,6 +25,10 @@
   scrollbar-width: none;
 }
 
+.font-\\[Rubik\\] {
+  font-family: var(--font-rubik), sans-serif;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
