@@ -15,7 +15,7 @@ export const clientData = {
   features: {
     showGallery: true,
     showOffers: true,
-    enableWhatsappOrder: true,
+    enableWhatsappOrder: false,
     showItemImages: true,
     showSocialMedia: true,
     showMap: true,
