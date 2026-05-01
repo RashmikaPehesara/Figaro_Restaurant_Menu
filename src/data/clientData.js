@@ -33,7 +33,7 @@ export const clientData = {
     {
       id: "o1",
       title: "Weekend Special",
-      description: "2 Burgers + 2 Drinks for $25",
+      description: "2 Burgers + 2 Drinks for Rs. 1,490.00",
       image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&q=60",
     },
     {
@@ -185,7 +185,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "Double Cheese Burger Classic",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -210,7 +210,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "Crispy Chicken Burger Classic",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -235,7 +235,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "Mushroom Swiss Burger Classic",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -260,7 +260,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "BBQ Bacon Burger Classic",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -285,7 +285,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "Spicy Fish Burger Classic",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -310,7 +310,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "Veggie Patty Burger Classic",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -510,7 +510,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "BBQ Bacon Burger Deluxe",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -535,7 +535,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "Spicy Fish Burger Deluxe",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -560,7 +560,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "Veggie Patty Burger Deluxe",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -585,7 +585,7 @@ export const clientData = {
         "categoryId": "burger",
         "name": "Tower Burger Deluxe",
         "description": "Deliciously prepared burger with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -610,7 +610,7 @@ export const clientData = {
         "categoryId": "rice",
         "name": "Chicken Fried Rice",
         "description": "Deliciously prepared rice with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": true,
         "pricing": {
             "type": "multi",
@@ -635,7 +635,7 @@ export const clientData = {
         "categoryId": "rice",
         "name": "Egg Fried Rice",
         "description": "Deliciously prepared rice with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1600891964092-4b11561ce198?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -660,7 +660,7 @@ export const clientData = {
         "categoryId": "rice",
         "name": "Seafood Rice",
         "description": "Deliciously prepared rice with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1565299524-69c2ce81cac4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -935,7 +935,7 @@ export const clientData = {
         "categoryId": "rice",
         "name": "Vegetable Fried Rice Special",
         "description": "Deliciously prepared rice with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -1135,7 +1135,7 @@ export const clientData = {
         "categoryId": "kottu",
         "name": "Cheese Kottu",
         "description": "Deliciously prepared kottu with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -1160,7 +1160,7 @@ export const clientData = {
         "categoryId": "kottu",
         "name": "Mix Kottu",
         "description": "Deliciously prepared kottu with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -1185,7 +1185,7 @@ export const clientData = {
         "categoryId": "kottu",
         "name": "Seafood Kottu",
         "description": "Deliciously prepared kottu with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -1210,7 +1210,7 @@ export const clientData = {
         "categoryId": "kottu",
         "name": "Egg Kottu",
         "description": "Deliciously prepared kottu with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -1235,7 +1235,7 @@ export const clientData = {
         "categoryId": "kottu",
         "name": "Beef Kottu",
         "description": "Deliciously prepared kottu with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -1260,7 +1260,7 @@ export const clientData = {
         "categoryId": "kottu",
         "name": "Mutton Kottu",
         "description": "Deliciously prepared kottu with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1600891964092-4b11561ce198?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -1285,7 +1285,7 @@ export const clientData = {
         "categoryId": "kottu",
         "name": "Vegetable Kottu",
         "description": "Deliciously prepared kottu with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1565299524-69c2ce81cac4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -1682,7 +1682,7 @@ export const clientData = {
         "categoryId": "drinks",
         "name": "Iced Tea",
         "description": "Deliciously prepared drinks with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1694,7 +1694,7 @@ export const clientData = {
         "categoryId": "drinks",
         "name": "Iced Coffee",
         "description": "Deliciously prepared drinks with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1706,7 +1706,7 @@ export const clientData = {
         "categoryId": "drinks",
         "name": "Milkshake",
         "description": "Deliciously prepared drinks with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1718,7 +1718,7 @@ export const clientData = {
         "categoryId": "drinks",
         "name": "Lemonade",
         "description": "Deliciously prepared drinks with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1730,7 +1730,7 @@ export const clientData = {
         "categoryId": "drinks",
         "name": "Coca Cola Large",
         "description": "Deliciously prepared drinks with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1742,7 +1742,7 @@ export const clientData = {
         "categoryId": "drinks",
         "name": "Pepsi Large",
         "description": "Deliciously prepared drinks with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1600891964092-4b11561ce198?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1754,7 +1754,7 @@ export const clientData = {
         "categoryId": "drinks",
         "name": "Sprite Large",
         "description": "Deliciously prepared drinks with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1565299524-69c2ce81cac4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1886,7 +1886,7 @@ export const clientData = {
         "categoryId": "desserts",
         "name": "Cheesecake",
         "description": "Deliciously prepared desserts with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1982,7 +1982,7 @@ export const clientData = {
         "categoryId": "desserts",
         "name": "Vanilla Ice Cream Extra",
         "description": "Deliciously prepared desserts with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -1994,7 +1994,7 @@ export const clientData = {
         "categoryId": "desserts",
         "name": "Brownie Extra",
         "description": "Deliciously prepared desserts with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2006,7 +2006,7 @@ export const clientData = {
         "categoryId": "desserts",
         "name": "Cheesecake Extra",
         "description": "Deliciously prepared desserts with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2018,7 +2018,7 @@ export const clientData = {
         "categoryId": "desserts",
         "name": "Fruit Salad Extra",
         "description": "Deliciously prepared desserts with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2030,7 +2030,7 @@ export const clientData = {
         "categoryId": "desserts",
         "name": "Watalappan Extra",
         "description": "Deliciously prepared desserts with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2042,7 +2042,7 @@ export const clientData = {
         "categoryId": "desserts",
         "name": "Caramel Pudding Extra",
         "description": "Deliciously prepared desserts with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1600891964092-4b11561ce198?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2054,7 +2054,7 @@ export const clientData = {
         "categoryId": "desserts",
         "name": "Tiramisu Extra",
         "description": "Deliciously prepared desserts with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1565299524-69c2ce81cac4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2282,7 +2282,7 @@ export const clientData = {
         "categoryId": "soup",
         "name": "Vegetable Soup Thick",
         "description": "Deliciously prepared soup with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2294,7 +2294,7 @@ export const clientData = {
         "categoryId": "soup",
         "name": "Mutton Soup Thick",
         "description": "Deliciously prepared soup with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2306,7 +2306,7 @@ export const clientData = {
         "categoryId": "soup",
         "name": "Noodle Soup Thick",
         "description": "Deliciously prepared soup with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2318,7 +2318,7 @@ export const clientData = {
         "categoryId": "soup",
         "name": "Pumpkin Soup Thick",
         "description": "Deliciously prepared soup with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2330,7 +2330,7 @@ export const clientData = {
         "categoryId": "noodles",
         "name": "Chicken Noodles",
         "description": "Deliciously prepared noodles with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60",
         "featured": true,
         "pricing": {
             "type": "multi",
@@ -2355,7 +2355,7 @@ export const clientData = {
         "categoryId": "noodles",
         "name": "Egg Noodles",
         "description": "Deliciously prepared noodles with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1600891964092-4b11561ce198?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -2380,7 +2380,7 @@ export const clientData = {
         "categoryId": "noodles",
         "name": "Seafood Noodles",
         "description": "Deliciously prepared noodles with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1565299524-69c2ce81cac4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -2842,7 +2842,7 @@ export const clientData = {
         "categoryId": "salads",
         "name": "Caesar Salad",
         "description": "Deliciously prepared salads with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2854,7 +2854,7 @@ export const clientData = {
         "categoryId": "salads",
         "name": "Chicken Salad",
         "description": "Deliciously prepared salads with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2866,7 +2866,7 @@ export const clientData = {
         "categoryId": "salads",
         "name": "Fruit Salad",
         "description": "Deliciously prepared salads with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2878,7 +2878,7 @@ export const clientData = {
         "categoryId": "salads",
         "name": "Green Salad",
         "description": "Deliciously prepared salads with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2890,7 +2890,7 @@ export const clientData = {
         "categoryId": "salads",
         "name": "Russian Salad",
         "description": "Deliciously prepared salads with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2902,7 +2902,7 @@ export const clientData = {
         "categoryId": "salads",
         "name": "Tuna Salad",
         "description": "Deliciously prepared salads with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1600891964092-4b11561ce198?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -2914,7 +2914,7 @@ export const clientData = {
         "categoryId": "salads",
         "name": "Pasta Salad",
         "description": "Deliciously prepared salads with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1565299524-69c2ce81cac4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -3046,7 +3046,7 @@ export const clientData = {
         "categoryId": "salads",
         "name": "Macaroni Salad Fresh",
         "description": "Deliciously prepared salads with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "single",
@@ -3220,7 +3220,7 @@ export const clientData = {
         "categoryId": "pizza",
         "name": "Meat Lovers Pizza",
         "description": "Deliciously prepared pizza with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3245,7 +3245,7 @@ export const clientData = {
         "categoryId": "pizza",
         "name": "Cheese Pizza",
         "description": "Deliciously prepared pizza with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3270,7 +3270,7 @@ export const clientData = {
         "categoryId": "pizza",
         "name": "Spicy Chicken Pizza",
         "description": "Deliciously prepared pizza with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3295,7 +3295,7 @@ export const clientData = {
         "categoryId": "pizza",
         "name": "Mushroom Pizza",
         "description": "Deliciously prepared pizza with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3320,7 +3320,7 @@ export const clientData = {
         "categoryId": "pizza",
         "name": "Margherita Pizza Supreme",
         "description": "Deliciously prepared pizza with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3345,7 +3345,7 @@ export const clientData = {
         "categoryId": "pizza",
         "name": "Pepperoni Pizza Supreme",
         "description": "Deliciously prepared pizza with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1600891964092-4b11561ce198?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3370,7 +3370,7 @@ export const clientData = {
         "categoryId": "pizza",
         "name": "BBQ Chicken Pizza Supreme",
         "description": "Deliciously prepared pizza with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1565299524-69c2ce81cac4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3845,7 +3845,7 @@ export const clientData = {
         "categoryId": "pasta",
         "name": "Cheese Pasta Delight",
         "description": "Deliciously prepared pasta with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1594212691515-db148564619a?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3870,7 +3870,7 @@ export const clientData = {
         "categoryId": "pasta",
         "name": "Seafood Pasta Delight",
         "description": "Deliciously prepared pasta with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3895,7 +3895,7 @@ export const clientData = {
         "categoryId": "pasta",
         "name": "Veggie Pasta Delight",
         "description": "Deliciously prepared pasta with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3920,7 +3920,7 @@ export const clientData = {
         "categoryId": "pasta",
         "name": "Spicy Pasta Delight",
         "description": "Deliciously prepared pasta with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3945,7 +3945,7 @@ export const clientData = {
         "categoryId": "pasta",
         "name": "Carbonara Delight",
         "description": "Deliciously prepared pasta with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3970,7 +3970,7 @@ export const clientData = {
         "categoryId": "pasta",
         "name": "Bolognese Delight",
         "description": "Deliciously prepared pasta with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1600891964092-4b11561ce198?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
@@ -3995,7 +3995,7 @@ export const clientData = {
         "categoryId": "pasta",
         "name": "Mac and Cheese Delight",
         "description": "Deliciously prepared pasta with fresh ingredients.",
-        "image": "https://images.unsplash.com/photo-1565299524-69c2ce81cac4?w=400&q=60",
+        "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=60",
         "featured": false,
         "pricing": {
             "type": "multi",
