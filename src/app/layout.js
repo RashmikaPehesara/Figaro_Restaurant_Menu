@@ -10,6 +10,7 @@ import { CartProvider } from "@/context/CartContext";
 import { FloatingCartButton } from "@/components/FloatingCartButton";
 import { CartSheet } from "@/components/CartSheet";
 import { Toast } from "@/components/Toast";
+import { Analytics } from '@vercel/analytics/next';
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
           <CartSheet />
           <Toast />
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );
