@@ -1,5 +1,6 @@
 import { Outfit, Rubik } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
           <CartSheet />
           <Toast />
         </CartProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
