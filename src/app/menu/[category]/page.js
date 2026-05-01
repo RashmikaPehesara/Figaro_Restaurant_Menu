@@ -126,12 +126,12 @@ function ItemCard({ item, onImageClick, addToCart }) {
         )}
         
         {item.pricing.type === "multi" && (
-          <div className="flex flex-wrap gap-2 mt-2 mb-4">
+          <div className="flex flex-wrap gap-2.5 mt-2 mb-4">
             {item.pricing.options.map((opt) => (
               <button
                 key={opt.label}
                 onClick={() => setSelectedSize(opt)}
-                className={`px-3 py-1 text-[10px] md:text-xs rounded-full transition-all active:scale-95 ${selectedSize?.label === opt.label ? "bg-primary text-primary-foreground shadow-sm shadow-primary/30" : "bg-white/10 text-muted-foreground hover:bg-border"}`}
+                className={`px-3 py-1.5 text-[13px] font-semibold rounded-full transition-all active:scale-95 ${selectedSize?.label === opt.label ? "bg-primary text-primary-foreground shadow-sm shadow-primary/30" : "bg-white/10 text-muted-foreground hover:bg-border"}`}
               >
                 {opt.label}
               </button>
